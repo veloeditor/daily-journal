@@ -10,19 +10,19 @@ body {
     font-weight: 700;
 }
 
-input[type=text], select {
+input[type=text] {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
 }
 
-textarea[name="message"], select {
+textarea[name="message"] {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
 }
 
-input[type=date], select {
+input[type=date] {
     display: flex;
     /* flex-direction: column; */
     border-radius: 5px;
