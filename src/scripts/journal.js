@@ -45,6 +45,12 @@ const journalEntries = [
         concepts: "Brief intro to CRUD/JSON",
         entry: "We started the day getting more introduction to json and Postman and then briefly learned how to fetch, parse and display data with javaScript. More to come Monday. Figured out the build a van exercise. In almost every case creating a variable is the answer to my issues",
         mood: "Happy"  
+    },
+    {
+        date: "08.22.2019",
+        concepts: "Group project - using JSON and pulling data from an API",
+        entry: "We did a quick group project where we pulled data from an API and had to limit the amount of info we show. This was a curveball as we had only been taught so far how to show all of the data available in the API. We used indexOf to limit the number of items we pulled from the API. The other trick was figuring out how to have our checkboxes checked based on the boolean value that was pulled from the API. We created a function with an if/else statement that checked for true and then inserted that function in to the html component.",
+        mood: "Happy"  
     }
 ];
 
@@ -79,32 +85,5 @@ journalEntries.forEach(entry => {
 console.log(journalEntries)
 
 
-// const displayContact = (contact) => {
-//     const contactHTMLRepresentation =
-//        `
-//        <section class="contact"> 
-//            <h1>${contact.name}</h1>
-//            <h2>${contact.title}</h2>
-//            <div>${contact.email}</div>
-//        </section>
-//        `
-//        //below is the command to build the innerHTML using the variable we created earlier to point to the place in the html we'll insert, .innerHTML to write to the innerHTML and then build up with the variable we created.
-//    placeToPutStuff.innerHTML += contactHTMLRepresentation
-// }
 
-
-
-/*
-    Purpose: To render all journal entries to the DOM
-
-    Arguments: entries (array of objects)
-*/
-
-
-
-// const renderJournalEntries = (entries) => {
-//     journalEntryComponent.innerhtml += makeJournalEntryComponent
-
-
-// // Invoke the render function
 

@@ -10,7 +10,6 @@ body {
     font-weight: 700;
 }
 
-input[type=text] {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
@@ -33,8 +32,7 @@ div.container {
     background-color: rgb(238, 235, 235);
     padding: 20px;
     max-width: 800px;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px;  
   }
 
   .entryLog {
@@ -51,7 +49,6 @@ div.container {
       padding-top: 5px;
       margin-top: 10px;
       margin-bottom: 10px;
-
   }
 
   .mood {
