@@ -51,6 +51,12 @@ const journalEntries = [
         concepts: "Group project - using JSON and pulling data from an API",
         entry: "We did a quick group project where we pulled data from an API and had to limit the amount of info we show. This was a curveball as we had only been taught so far how to show all of the data available in the API. We used indexOf to limit the number of items we pulled from the API. The other trick was figuring out how to have our checkboxes checked based on the boolean value that was pulled from the API. We created a function with an if/else statement that checked for true and then inserted that function in to the html component.",
         mood: "Happy"  
+    },
+    {
+        date: "08.23.2019",
+        concepts: "Chapter 12 - Handling Events",
+        entry: "Today we worked on event handling in JavaScript and the exercises were pretty tough. I'm finding I'm able to get about 2/3rds of the way there but need to get help for that final 1/3rd to complete the task. I'm not upset about that fact. The subject is pretty complicated but I think I can get a grasp on it soon enough. I wouldn't say I ended the day happy, sort of in between...",
+        mood: "Blah"  
     }
 ];
 
