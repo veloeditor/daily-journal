@@ -57,6 +57,12 @@
             "concepts": "Chapter 12 - Handling Events",
             "entry": "Today we worked on event handling in JavaScript and the exercises were pretty tough. I'm finding I'm able to get about 2/3rds of the way there but need to get help for that final 1/3rd to complete the task. I'm not upset about that fact. The subject is pretty complicated but I think I can get a grasp on it soon enough. I wouldn't say I ended the day happy, sort of in between...",
             "mood": "Blah"  
+        },
+        {
+            "date": "08.31.2019",
+            "concepts": "Group Project #2",
+            "entry": "We just wrapped up our 2nd group project which had us build an app that would create an itinarary based on a user's selections. I was responsble for the parks API and coding the JavaScript to make that work. Our group worked well together and I was successful in completing my part of the project. But we didnt plan as well as we should, so a valuable lesson learned is to program the app on the white board before we start coding. We need to understand the data flow first.",
+            "mood": "Blah"  
         }
     ]
 }
