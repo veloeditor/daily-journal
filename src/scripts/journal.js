@@ -1,33 +1,42 @@
 
 
-const journalEntryComponent = document.querySelector(".entryLog")
+// const journalEntryComponent = document.querySelector(".entryLog")
 
-const makeJournalEntryComponent = (date, concepts, entry, mood) => {
-    // const journalHTMLRepresentation =
-    // Create your own HTML structure for a journal entry
-   return `
-        <article class="entry">
-        <header>
-        <h2 class="date">${date}</h2>
-        <h1 class="concepts">${concepts}</h1>
-        </header>
-        <section>${entry}</section>
-        <br>
-        <section class="mood">${mood}</section>
+// const makeJournalEntryComponent = (date, concepts, entry, mood) => {
+//     // const journalHTMLRepresentation =
+//     // Create your own HTML structure for a journal entry
+//    return `
+//         <article class="entry">
+//         <header>
+//         <h2 class="date">${date}</h2>
+//         <h1 class="concepts">${concepts}</h1>
+//         </header>
+//         <section>${entry}</section>
+//         <br>
+//         <section class="mood">${mood}</section>
 
-        <footer>
-        </footer>
-    </article>
-    `
-}
+//         <footer>
+//         </footer>
+//     </article>
+//     `
+// }
 
-fetch("http://localhost:3000/journalEntries")
-  .then(data => data.json())
-  .then(journals => {
-      for (const journal of journals) {
-          journalEntryComponent.innerHTML += makeJournalEntryComponent(journal.date, journal.concepts, journal.entry, journal.mood);
-      }
-  })
+// fetch("http://localhost:8088/journalEntries")
+//   .then(data => data.json())
+//   .then(journals => {
+//       for (const journal of journals) {
+//           journalEntryComponent.innerHTML += makeJournalEntryComponent(journal.date, journal.concepts, journal.entry, journal.mood);
+//       }
+//   })
+
+// const getAPIData = {
+//     getJournalEntries () {
+//         return fetch("http://localhost:8088/journalEntries")
+//             .then(response => response.json())
+//     }
+// }
+
+
 
 
 

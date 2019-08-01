@@ -4,7 +4,7 @@
         {
             "date": "08.12.2019",
             "concepts": "Flexbox, gitHub, teamwork",
-            "entry": "This week we learned Flexbox, using gitHub wiht a team, built a celebrity tribute project with a team and started in to JavaScript with manipulating the DOM and intro to objects",
+            "entry": "This week we learned Flexbox, using gitHub with a team, built a celebrity tribute project with a team and started in to JavaScript with manipulating the DOM and intro to objects",
             "mood": "Happy" 
         },
     
@@ -18,7 +18,7 @@
         {
             "date": "08.15.2019",
             "concepts": "JS objects",
-            "entry": "We just finished our 2nd day of JS and my brain hurts a bit. I was able to nail the first exercise which was the ChickenMonkey exercise. The additional exercises were harder for me to initial figure out, but began to sink in to learning tmeplate literals which are the way to go. I feel I'm grasping about 90% of things so far but feel uneasy about the coming ays",
+            "entry": "We just finished our 2nd day of JS and my brain hurts a bit. I was able to nail the first exercise which was the ChickenMonkey exercise. The additional exercises were harder for me to initial figure out, but began to sink in to learning template literals which are the way to go. I feel I'm grasping about 90% of things so far but feel uneasy about the coming ays",
             "mood": "Apprehensive"  
         },
     
@@ -37,7 +37,7 @@
         {
             "date": "08.18.2019",
             "concepts": "More HTML Components, intro to json",
-            "entry": "Overall it was a good day. I was able to figure out how to get my Daily Journel html to appear in the DOM thanks to Steve. We also had a introduction to JSON and APIs. Supposedly the pothole of despair begins tomorrow!",
+            "entry": "Overall it was a good day. I was able to figure out how to get my Daily Journal html to appear in the DOM thanks to Steve. We also had a introduction to JSON and APIs. Supposedly the pothole of despair begins tomorrow!",
             "mood": "Happy"  
         },
         {
@@ -61,8 +61,14 @@
         {
             "date": "08.31.2019",
             "concepts": "Group Project #2",
-            "entry": "We just wrapped up our 2nd group project which had us build an app that would create an itinarary based on a user's selections. I was responsble for the parks API and coding the JavaScript to make that work. Our group worked well together and I was successful in completing my part of the project. But we didnt plan as well as we should, so a valuable lesson learned is to program the app on the white board before we start coding. We need to understand the data flow first.",
+            "entry": "We just wrapped up our 2nd group project which had us build an app that would create an itinerary based on a user's selections. I was responsible for the parks API and coding the JavaScript to make that work. Our group worked well together and I was successful in completing my part of the project. But we didn't plan as well as we should, so a valuable lesson learned is to program the app on the white board before we start coding. We need to understand the data flow first.",
             "mood": "Blah"  
+        },
+        {
+            "date": "08.31.2019",
+            "concepts": "Factory Functions",
+            "entry": "We went through factory functions today. It was a concept we already started on a week ago but went in to more depth. It's a concept I understand pretty well. I also had a one-on-one with Bryan and they're happy with where I'm at. I feel like I'm right where I need and expect to be.",
+            "mood": "Happy"  
         }
     ]
 }
