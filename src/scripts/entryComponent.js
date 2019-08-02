@@ -19,3 +19,14 @@ const makeJournalEntryComponent = (date, concepts, entry, mood) => {
     </article>
     `
 }
+
+//Define a factory function whose responsibility is to generate an object that represents a journal entry.
+
+const journalEntryObject = (date, concepts, entry, mood) => {
+    return {
+    date: date,
+    concepts: concepts,
+    entry: entry,
+    mood: mood
+}
+}

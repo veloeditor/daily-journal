@@ -1,55 +1,36 @@
 
 
-// const journalEntryComponent = document.querySelector(".entryLog")
+// const submitEntry = document.querySelector(".submit_button")
 
-// const makeJournalEntryComponent = (date, concepts, entry, mood) => {
-//     // const journalHTMLRepresentation =
-//     // Create your own HTML structure for a journal entry
-//    return `
-//         <article class="entry">
-//         <header>
-//         <h2 class="date">${date}</h2>
-//         <h1 class="concepts">${concepts}</h1>
-//         </header>
-//         <section>${entry}</section>
-//         <br>
-//         <section class="mood">${mood}</section>
+// submitEntry.addEventListener("click", event => {
+//     const journalDateField = document.querySelector("#journalDate")
+//     const dateValue = journalDateField.value
 
-//         <footer>
-//         </footer>
-//     </article>
-//     `
-// }
+//     const conceptsCoveredField = document.querySelector("#conceptsCovered")
+//     const conceptsValue = conceptsCoveredField.value
 
-// fetch("http://localhost:8088/journalEntries")
-//   .then(data => data.json())
-//   .then(journals => {
-//       for (const journal of journals) {
-//           journalEntryComponent.innerHTML += makeJournalEntryComponent(journal.date, journal.concepts, journal.entry, journal.mood);
-//       }
-//   })
+//     const journalEntryField = document.querySelector("#journalEntry").value
+//     const entryValue = journalEntryField.value
 
-// const getAPIData = {
-//     getJournalEntries () {
-//         return fetch("http://localhost:8088/journalEntries")
-//             .then(response => response.json())
-//     }
-// }
+//     const moodSelect = document.querySelector("#mood_select").value
+//     const moodValue = moodSelect.value
+
+//need input validation here
+
+// })
 
 
 
 
+//Now you must use fetch to create your journal entry in the API. The default method is GET, so you've never had to specify and configuration options with your fetch statements before. However, with POST, you need to configure the request.
 
-
-// journalEntries.forEach(entry => {
-//     const htmlRep = makeJournalEntryComponent(entry.date, entry.concepts, entry.entry, entry.mood)
-//     journalEntryComponent.innerHTML += htmlRep
-//   })
-
-// makeJournalEntryComponent(journalEntries)
-
-
-
-
-
-
+// const saveJournalEntry = (entryObject) => {
+//     // Use `fetch` with the POST method to add your entry to your API
+//     fetch("http://localhost:8088/journalEntries", {
+//         method: "POST",
+//         headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify(entryObject)
+//     });
+// };

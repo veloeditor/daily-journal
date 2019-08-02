@@ -10,7 +10,7 @@
 <body>
     <h1 class="journal_title">Brian's Daily Journal</h1>
     <div class="container">
-        <form action="">
+        
             <fieldset>
                 <label for="journalDate">Date of Entry</label>
                 <input type="date" name="journalDate" id="journalDate">
@@ -22,11 +22,11 @@
             <fieldset>
                 <label for="journalEntry">Journal Entry</label>
                 <!-- <input type="text" name="journalEntry" id="journalEntry"> -->
-                <textarea name="message" rows="5" cols="40"></textarea>
+                <textarea name="message" id="journalEntry" rows="5" cols="40"></textarea>
             </fieldset>
             <fieldset>
                 <label for="dailyMood">Mood for the Day</label>
-                <select name="mood">
+                <select name="mood" id="mood_select">
                     <option value="Happy">Happy</option>
                     <option value="Sad">Sad</option>
                     <option value="Apprehensive">Apprehensive</option>
@@ -35,11 +35,16 @@
             </fieldset>
             <fieldset>
                 <!-- <label for="submitJournal">Submit Journal Entry</label> -->
-                <input type="submit" class="" value="Submit Journal Entry">
+                <input type="submit" class="submit_button" value="Submit Journal Entry">
+                <button type="button" class="clearButton">Clear Fields</button>
+            </fieldset>
+            <fieldset>
+            
             </fieldset>
             <br>
+        
             
-        </form>
+        
     </div>
     <article class="entryLog">
 
