@@ -45,7 +45,8 @@ submitEntry.addEventListener("click", event => {
 
 const clearButton = document.querySelector(".clearButton")
 clearButton.addEventListener("click", () => {
-    journalDateField.innerText = ""
-    conceptsCoveredField.innerText = ""
+    journalDateField.value = ""
+    conceptsCoveredField.value = ""
+    journalEntryField.value = ""
 
 })
