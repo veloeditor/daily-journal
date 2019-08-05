@@ -90,6 +90,20 @@
       "entry": "Finally got the form fields to post thanks to help from Bill.  ",
       "mood": "Happy",
       "id": 13
+    },
+    {
+      "date": "2019-08-03",
+      "concepts": "Post limits and a Clear Button",
+      "entry": "So I've added a maximum character limit to what I can write here as well as added a clear button below. Eventually I'd like to have the form fields clear out automatically once you click submit, but for now this'll do.",
+      "mood": "Happy",
+      "id": 14
+    },
+    {
+      "date": "2019-08-05",
+      "concepts": "ES6 Modules",
+      "entry": "We learned about ES6 modules today and converted this daily journal in to proper ES6 modules. Also did more exercises with array methods which are really cool.",
+      "mood": "Happy",
+      "id": 15
     }
   ]
 }

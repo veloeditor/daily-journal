@@ -1,11 +1,12 @@
 body {
-    background-color: darkslategrey;
+    background-color: rgb(30, 54, 54);
     /* font-family: 'Roboto', sans-serif; */
 }
 
 .journal_title {
-    color: rgb(229, 226, 226);
+    color: rgb(201, 201, 201);
     text-align: center;
+    padding-top: 10px;
     padding-left: 10px;
     font-weight: 700;
     max-width: 800px;
@@ -40,7 +41,7 @@ input[type=date] {
   }
 
   .entryLog {
-      color: black;
+      color: rgb(2, 15, 15);
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -75,9 +76,9 @@ input[type=date] {
   }
 
   .date {
-      font-size: 1.2em;
+      font-size: 1.5em;
   }
 
   .concepts {
-      font-size: 21px;
+      font-size: 23px;
   }

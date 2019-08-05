@@ -5,3 +5,5 @@ const journalEntryComponent = document.querySelector(".entryLog")
 const renderEntry = (htmlstring) => {
     journalEntryComponent.innerHTML += htmlstring
 }
+
+export default renderEntry

@@ -13,3 +13,5 @@ const saveJournalEntry = (journalEntry) => {
       body: JSON.stringify(journalEntry)
   });
 };
+
+export default {getAPIData, saveJournalEntry}

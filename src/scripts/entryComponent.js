@@ -30,3 +30,5 @@ const journalEntryObject = (date, concepts, entry, mood) => {
     mood: mood
 }
 }
+
+export default {makeJournalEntryComponent, journalEntryObject}
