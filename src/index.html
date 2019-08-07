@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Brian's Daily Journal</title>
     <link rel="stylesheet" href="styles/journals.css">
+
+    
 </head>
 <body>
     <h1 class="journal_title">Brian's Daily Journal</h1>
@@ -38,8 +40,16 @@
                 <input type="submit" class="submit_button" value="Submit Journal Entry">
                 <!-- <button type="button" class="clearButton">Clear Fields</button> -->
             </fieldset>
-            <fieldset>
-            
+            <fieldset id="radio_selects">
+                <div id="moodRadio">
+                        <legend>Search by Mood:</legend>
+                    <div class="mood-option-div"><input class="mood-radio" type="radio" name="moods" value="Happy">Happy</div>
+                    <div class="mood-option-div"><input class="mood-radio" type="radio" name="moods" value="Blah">Blah</div>
+                    <div class="mood-option-div"><input class="mood-radio" type="radio" name="moods" value="Frustrated">Frustrated</div>
+                    <div class="mood-option-div"><input class="mood-radio" type="radio" name="moods" value="Sad">Sad</div>
+                    <!-- <div class="mood-option-div"><input class="mood-radio" type="radio" name="moods" value="">Clear</div> -->
+                  </div>
+                  <button class="clear_radios" id="clear_radios">Clear Mood Filter</button>
             </fieldset>
             <br>
         
@@ -49,9 +59,7 @@
     <article class="entryLog">
 
     </article>
-    <!-- <script src="scripts/data.js"></script>      
-    <script src="scripts/entryComponent.js"></script>      
-    <script src="scripts/entriesDOM.js"></script>       -->
     <script type= "module" src="scripts/main.js"></script>      
+ 
 </body>
 </html>

@@ -6,4 +6,6 @@ const renderEntry = (htmlstring) => {
     journalEntryComponent.innerHTML += htmlstring
 }
 
+
+
 export default renderEntry

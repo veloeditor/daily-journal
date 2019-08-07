@@ -1,11 +1,11 @@
 //  // const journalHTMLRepresentation =
 //     // Create your own HTML structure for a journal entry
 
-const makeJournalEntryComponent = (date, concepts, entry, mood) => {
+const makeJournalEntryComponent = (id, date, concepts, entry, mood) => {
     // const journalHTMLRepresentation =
     // Create your own HTML structure for a journal entry
    return `
-        <article class="entry">
+        <article class="entry entry--${id}">
         <header>
         <h2 class="date">${date}</h2>
         <h1 class="concepts">${concepts}</h1>
@@ -13,22 +13,19 @@ const makeJournalEntryComponent = (date, concepts, entry, mood) => {
         <section>${entry}</section>
         <br>
         <section class="mood">${mood}</section>
-
-        <footer>
-        </footer>
+        <br>
+        <button class="delete-button" id="delete_Entry--${id}">
+            Delete Entry
+        </button>
     </article>
     `
 }
 
-//Define a factory function whose responsibility is to generate an object that represents a journal entry.
 
-const journalEntryObject = (date, concepts, entry, mood) => {
-    return {
-    date: date,
-    concepts: concepts,
-    entry: entry,
-    mood: mood
-}
-}
 
-export default {makeJournalEntryComponent, journalEntryObject}
+
+
+
+
+
+export default makeJournalEntryComponent
