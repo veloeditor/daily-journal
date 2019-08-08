@@ -111,13 +111,13 @@ radioButton.forEach(button => {
     })
 })
 
-// const clearButton = document.querySelector(".clear_radios")
+const clearButton = document.querySelector(".clear_radios")
 // const moodRadio = document.querySelectorAll("mood-radio")
 
 // clearButton.addEventListener("click", event => {
-//     moodRadio.forEach(mood => {
-//         if (mood.checked === true) {
-//            return mood.checked = false
+//     radioButton.forEach(mood => {
+//         if (mood.checked == true) {
+//            return mood.checked == false
 //         }
 //     })
 // })
