@@ -1,7 +1,20 @@
-//  // const journalHTMLRepresentation =
-//     // Create your own HTML structure for a journal entry
+const entryContainer = document.querySelector(".entryLog")
+const happyFace = `<i class="far fa-smile"></i>`
+const blahFace = `<i class="far fa-meh"></i>`
+const sadFace = `<i class="far fa-frown"></i>`
+const frustFace = `<i class="far fa-tired"></i>`
 
 const makeJournalEntryComponent = (id, date, concepts, entry, mood) => {
+    // if(mood === "Happy") {
+    //     entryContainer.innerHTML += happyFace
+    // } else if (mood === "Blah") {
+    //     entryContainer.innerHTML += blahFace 
+    // } else if (mood === "Frustrated") {
+    //     entryContainer.innerHTML += frustFace
+    // } else if (mood === "Sad"){
+    //     entryContainer.innerHTML += sadFace
+    // }
+ 
     // const journalHTMLRepresentation =
     // Create your own HTML structure for a journal entry
    return `

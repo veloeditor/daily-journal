@@ -3,6 +3,28 @@ body {
     /* font-family: 'Roboto', sans-serif; */
 }
 
+@media(min-width:500px){
+   .container {
+    border-radius: 8px;
+    background-color: lightgray;
+    padding: 20px;
+    min-width: 500px;
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .entryLog {
+      color: rgb(2, 15, 15);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: auto;
+      max-width: 1000px;
+    } 
+}
+
+
+
 .journal_title {
     color: rgb(201, 201, 201);
     text-align: center;
@@ -33,24 +55,12 @@ input[type=date] {
     border-radius: 5px;
 }
 
-.container {
-    border-radius: 8px;
-    background-color: lightgray;
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-  }
 
-  .entryLog {
-      color: rgb(2, 15, 15);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: auto;
-  }
 
   .entry {
       flex-basis: 30%;
+      border-style: solid;
+      border-width: 4px;
       background-color: lightgray;
       border-radius: 10px;
       max-width: 400px;
@@ -64,6 +74,7 @@ input[type=date] {
       margin-right: 10px;
       align-content: center;
       justify-content: center;
+      /* box-shadow: 3px 3px 5px rgb(134, 134, 134); */
       
   }
 

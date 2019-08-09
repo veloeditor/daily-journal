@@ -15,7 +15,8 @@
         
             <fieldset>
                 <label for="journalDate">Date of Entry</label>
-                <input type="date" name="journalDate" id="journalDate" autofocus>
+                <input type="date" name="journalDate" id="journalDate" autofocus
+                min="2019-07-01" max="2020-02-01" date-date="" data-date-format="MM DDDD YYYY">
             </fieldset>
             <fieldset>   
                 <label for="conceptsCovered">Concepts covered</label>
@@ -62,6 +63,7 @@
 
     </article>
     <script src="scripts/moment.min.js"></script>
+    <script src="https://kit.fontawesome.com/24b573a006.js"></script>
     <script type= "module" src="scripts/main.js"></script>      
  
 </body>
