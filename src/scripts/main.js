@@ -96,6 +96,10 @@ entryLogContainer.addEventListener("click", () => {
         API.deleteJournalEntry(deleteBtnID)
             .then(getAllJournalEntries)
     }
+    if (event.target.id.startsWith("edit_Entry")) {
+        const entryId = event.target.id.split("--")[1]
+        API.updateFormFields(entryId)
+    }
 })
 
 

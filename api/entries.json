@@ -118,6 +118,13 @@
       "entry": "Finally figured out how to delete JSON data.",
       "mood": "Happy",
       "id": 17
+    },
+    {
+      "date": "2019-08-09",
+      "concepts": "Validation, No AC",
+      "entry": "I was able to add validation against certain characters to go along with the checks for maximum letters and empty strings. Also NSS lost its AC this week so that hasn't been fun.",
+      "mood": "Happy",
+      "id": 18
     }
   ]
 }
