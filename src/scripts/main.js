@@ -16,7 +16,7 @@ const maxLength = document.querySelector("#journalEntry").maxLength;
 const getAllJournalEntries = () => {
     API.getAPIData().then(journals => {
         for (const journal of journals) {
-            const entryHTML = makeJournalEntryComponent(journal.id,journal.date, journal.concepts, journal.entry, journal.mood);
+            const entryHTML = makeJournalEntryComponent(journal.id, journal.date, journal.concepts, journal.entry, journal.mood);
             renderEntry(entryHTML)
         }
     })
@@ -30,63 +30,80 @@ getAllJournalEntries()
 
 const journalEntryObject = (date, concepts, entry, mood) => {
     return {
-    date: date,
-    concepts: concepts,
-    entry: entry,
-    mood: mood
-}
+        date: date,
+        concepts: concepts,
+        entry: entry,
+        mood: mood
+    }
 }
 
 
 //Here's the main code for posts
 
 submitEntry.addEventListener("click", event => {
-    
+    const hiddenEntryID = document.querySelector("#entryId")
     const dateValue = journalDateField.value
     const conceptsValue = conceptsCoveredField.value
-    const notAllowedCharacters = /[\#\$\%\^\&\*\+\=\@\~\<\>\-\_]/;
-    const regEx = notAllowedCharacters.test(journalEntryField.value)
-    if (regEx === true) {
-            return alert("You have typed an invalid character")
-        }
     const entryValue = journalEntryField.value
-        if (entryValue.length <= 300) {
-            } else {
-                return alert("Please limit the number of characters to under 300")
-            }
-        
     const moodValue = moodSelect.value
 
     const newJournalEntry = journalEntryObject(dateValue, conceptsValue, entryValue, moodValue)
 
-    //form validation -- testing against blank entries.
-    
-    if (dateValue !== "" || conceptsValue !== "" || entryValue !== "") {
-        
-    } else {
-        return alert("Please fill out each field before submitting")
-    }
-    
-    //use values from input fields to create the entry:
-
-    API.saveJournalEntry(newJournalEntry)
-        .then(() => {
-            dataMethods.getAPIData().then(journals => {
-                for (const journal of journals) {
-                    const entryHTML = makeJournalEntryComponent(journal.id, journal.date, journal.concepts, journal.entry, journal.mood);
-                    renderEntry(entryHTML)
-                }
+    if (hiddenEntryID.value !== "") {
+        API.editJournalEntry(newJournalEntry, hiddenEntryID.value)
+            .then(() => {
+                dataMethods.getAPIData().then(journals => {
+                    for (const journal of journals) {
+                        const entryHTML = makeJournalEntryComponent(journal.id, journal.date, journal.concepts, journal.entry, journal.mood);
+                        renderEntry(entryHTML)
+                    }
+                })
             })
-        })
+    } else {
+
+
+        const notAllowedCharacters = /[\#\$\%\^\&\*\+\=\@\~\<\>\-\_]/;
+        const regEx = notAllowedCharacters.test(journalEntryField.value)
+        if (regEx === true) {
+            return alert("You have typed an invalid character")
+        }
+
+        if (entryValue.length <= 300) {} else {
+            return alert("Please limit the number of characters to under 300")
+        }
+
+
+
+        //form validation -- testing against blank entries.
+
+        if (dateValue !== "" || conceptsValue !== "" || entryValue !== "") {
+
+        } else {
+            return alert("Please fill out each field before submitting")
+        }
+
+        //use values from input fields to create the entry:
+
+        API.saveJournalEntry(newJournalEntry)
+            .then(() => {
+                dataMethods.getAPIData().then(journals => {
+                    for (const journal of journals) {
+                        const entryHTML = makeJournalEntryComponent(journal.id, journal.date, journal.concepts, journal.entry, journal.mood);
+                        renderEntry(entryHTML)
+                    }
+                })
+            })
 
         //clear the fields 
         journalDateField.value = ""
         conceptsCoveredField.value = ""
         journalEntryField.value = ""
+    }
+
 })
 
 
-//Here is the code for deleting entries:
+//Here is the code for deleting/editing entries:
 
 const entryLogContainer = document.querySelector(".entryLog")
 
@@ -99,6 +116,7 @@ entryLogContainer.addEventListener("click", () => {
     if (event.target.id.startsWith("edit_Entry")) {
         const entryId = event.target.id.split("--")[1]
         API.updateFormFields(entryId)
+            .then(getAllJournalEntries)
     }
 })
 
@@ -116,8 +134,5 @@ radioButton.forEach(button => {
             })
             entryLogContainer.innerHTML = filteredMood
         })
-        
     })
 })
-
-
