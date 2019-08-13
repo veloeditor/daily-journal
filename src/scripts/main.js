@@ -10,12 +10,15 @@ const conceptsCoveredField = document.querySelector("#conceptsCovered")
 const moodSelect = document.querySelector("#mood_select")
 const journalEntryField = document.querySelector("#journalEntry")
 const maxLength = document.querySelector("#journalEntry").maxLength;
+const entryLogContainer = document.querySelector(".entryLog")
 
 //get journal entries and render to the dom
 
 const getAllJournalEntries = () => {
+    entryLogContainer.innerHTML = ""
     API.getAPIData().then(journals => {
         for (const journal of journals) {
+
             const entryHTML = makeJournalEntryComponent(journal.id, journal.date, journal.concepts, journal.entry, journal.mood);
             renderEntry(entryHTML)
         }
@@ -48,64 +51,53 @@ submitEntry.addEventListener("click", event => {
     const moodValue = moodSelect.value
 
     const newJournalEntry = journalEntryObject(dateValue, conceptsValue, entryValue, moodValue)
+    // entryLogContainer.innerHTML = ""
 
     if (hiddenEntryID.value !== "") {
         API.editJournalEntry(newJournalEntry, hiddenEntryID.value)
-            .then(() => {
-                dataMethods.getAPIData().then(journals => {
-                    for (const journal of journals) {
-                        const entryHTML = makeJournalEntryComponent(journal.id, journal.date, journal.concepts, journal.entry, journal.mood);
-                        renderEntry(entryHTML)
-                    }
-                })
-            })
-    } else {
+            .then(getAllJournalEntries)
 
+    } else {
 
         const notAllowedCharacters = /[\#\$\%\^\&\*\+\=\@\~\<\>\-\_]/;
         const regEx = notAllowedCharacters.test(journalEntryField.value)
+
         if (regEx === true) {
-            return alert("You have typed an invalid character")
+            alert("You have typed an invalid character")
+
+        } else if (entryValue.length > 300) {
+            alert("Please limit the number of characters to under 300")
         }
-
-        if (entryValue.length <= 300) {} else {
-            return alert("Please limit the number of characters to under 300")
-        }
-
-
 
         //form validation -- testing against blank entries.
+        else if (dateValue === "" || conceptsValue === "" || entryValue === "") {
 
-        if (dateValue !== "" || conceptsValue !== "" || entryValue !== "") {
-
+            alert("Please fill out each field before submitting")
         } else {
-            return alert("Please fill out each field before submitting")
+
+            //use values from input fields to create the entry:
+
+            API.saveJournalEntry(newJournalEntry)
+                .then(getAllJournalEntries)
+
+            //clear the fields 
+            journalDateField.value = ""
+            conceptsCoveredField.value = ""
+            journalEntryField.value = ""
         }
-
-        //use values from input fields to create the entry:
-
-        API.saveJournalEntry(newJournalEntry)
-            .then(() => {
-                dataMethods.getAPIData().then(journals => {
-                    for (const journal of journals) {
-                        const entryHTML = makeJournalEntryComponent(journal.id, journal.date, journal.concepts, journal.entry, journal.mood);
-                        renderEntry(entryHTML)
-                    }
-                })
-            })
-
-        //clear the fields 
-        journalDateField.value = ""
-        conceptsCoveredField.value = ""
-        journalEntryField.value = ""
     }
 
 })
 
+const deleteAllFields = (journalEntry) => {
+    journalDateField.value = ""
+    conceptsCoveredField.value = ""
+    journalEntryField.value = ""
+}
 
 //Here is the code for deleting/editing entries:
 
-const entryLogContainer = document.querySelector(".entryLog")
+// const entryLogContainer = document.querySelector(".entryLog")
 
 entryLogContainer.addEventListener("click", () => {
     if (event.target.id.startsWith("delete_Entry")) {
@@ -117,7 +109,9 @@ entryLogContainer.addEventListener("click", () => {
         const entryId = event.target.id.split("--")[1]
         API.updateFormFields(entryId)
             .then(getAllJournalEntries)
+
     }
+
 })
 
 

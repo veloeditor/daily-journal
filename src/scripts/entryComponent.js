@@ -1,9 +1,9 @@
 const entryContainer = document.querySelector(".entryLog")
 
 const makeJournalEntryComponent = (id, date, concepts, entry, mood) => {
-      // const journalHTMLRepresentation =
+    // const journalHTMLRepresentation =
     // Create your own HTML structure for a journal entry
-   return `
+    return `
         <article class="entry entry--${id}">
         <header>
         <h2 class="date">${date}</h2>

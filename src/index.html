@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,66 +8,70 @@
     <title>Brian's Daily Journal</title>
     <link rel="stylesheet" href="styles/journals.css">
 
-    
+
 </head>
+
 <body>
     <h1 class="journal_title">Brian's Daily Journal</h1>
     <div class="container">
-        <form class="form" action="">
-            <input type="hidden" id="entryId" value="" />
-            <fieldset>
-                <label for="journalDate">Date of Entry</label>
-                <input type="date" name="journalDate" id="journalDate" autofocus
-                min="2019-07-01" max="2020-02-01" date-date="" data-date-format="MM DDDD YYYY">
-            </fieldset>
-            <fieldset>   
-                <label for="conceptsCovered">Concepts covered</label>
-                <input type="text" name="conceptsCovered" id="conceptsCovered">
-            </fieldset>
-            <fieldset>
-                <label for="journalEntry">Journal Entry</label>
-                <!-- <input type="text" name="journalEntry" id="journalEntry"> -->
-                <textarea name="message" id="journalEntry" rows="5" cols="40"></textarea>
-            </fieldset>
-            <fieldset>
-                <label for="dailyMood">Mood for the Day</label>
-                <select name="mood" id="mood_select">
-                    <option value="Happy">Happy</option>
-                    <option value="Sad">Sad</option>
-                    <option value="Apprehensive">Apprehensive</option>
-                    <option value="Blah">Blah</option>
-                </select>
-            </fieldset>
-            <fieldset>
-                <!-- <label for="submitJournal">Submit Journal Entry</label> -->
-                <input type="submit" class="submit_button" value="Submit Journal Entry">
-                <!-- <button type="button" class="clearButton">Clear Fields</button> -->
-            </fieldset>
-            <fieldset id="radio_selects">
-                <div id="moodRadio">
-                        <legend>Search by Mood:</legend>
-                    <div class="mood-option-div"><input class="mood-radio" type="radio" name="moods" value="Happy">Happy</div>
-                    <div class="mood-option-div"><input class="mood-radio" type="radio" name="moods" value="Blah">Blah</div>
-                    <div class="mood-option-div"><input class="mood-radio" type="radio" name="moods" value="Frustrated">Frustrated</div>
-                    <div class="mood-option-div"><input class="mood-radio" type="radio" name="moods" value="Sad">Sad</div>
-                    <!-- <div class="mood-option-div"><input class="mood-radio" type="radio" name="moods" value="">Clear</div> -->
-                  </div>
-            
-                <button onclick="location.reload();">Remove Filters</button>
-                    
-            </fieldset>
-        </form>
-            <br>
-        
-            
-        
+
+        <input type="hidden" id="entryId" value="" />
+        <fieldset>
+            <label for="journalDate">Date of Entry</label>
+            <input type="date" name="journalDate" id="journalDate" autofocus min="2019-07-01" max="2020-02-01"
+                date-date="" data-date-format="MM DDDD YYYY">
+        </fieldset>
+        <fieldset>
+            <label for="conceptsCovered">Concepts covered</label>
+            <input type="text" name="conceptsCovered" id="conceptsCovered">
+        </fieldset>
+        <fieldset>
+            <label for="journalEntry">Journal Entry</label>
+            <!-- <input type="text" name="journalEntry" id="journalEntry"> -->
+            <textarea name="message" id="journalEntry" rows="5" cols="40"></textarea>
+        </fieldset>
+        <fieldset>
+            <label for="dailyMood">Mood for the Day</label>
+            <select name="mood" id="mood_select">
+                <option value="Happy">Happy</option>
+                <option value="Sad">Sad</option>
+                <option value="Apprehensive">Apprehensive</option>
+                <option value="Blah">Blah</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <!-- <label for="submitJournal">Submit Journal Entry</label> -->
+            <input type="submit" class="submit_button" value="Submit Journal Entry">
+            <!-- <button type="button" class="clearButton">Clear Fields</button> -->
+        </fieldset>
+        <fieldset id="radio_selects">
+            <div id="moodRadio">
+                <legend>Search by Mood:</legend>
+                <div class="mood-option-div"><input class="mood-radio" type="radio" name="moods" value="Happy">Happy
+                </div>
+                <div class="mood-option-div"><input class="mood-radio" type="radio" name="moods" value="Blah">Blah
+                </div>
+                <div class="mood-option-div"><input class="mood-radio" type="radio" name="moods"
+                        value="Frustrated">Frustrated</div>
+                <div class="mood-option-div"><input class="mood-radio" type="radio" name="moods" value="Sad">Sad
+                </div>
+                <!-- <div class="mood-option-div"><input class="mood-radio" type="radio" name="moods" value="">Clear</div> -->
+            </div>
+
+            <!-- <button onclick="location.reload();">Remove Filters</button> -->
+
+        </fieldset>
+
+        <br>
+
+
+
     </div>
     <article class="entryLog">
 
     </article>
-    <script src="scripts/moment.min.js"></script>
-    <script src="https://kit.fontawesome.com/24b573a006.js"></script>
-    <script type= "module" src="scripts/main.js"></script>      
- 
+    <script type="module" src="scripts/main.js"></script>
+
 </body>
+
 </html>

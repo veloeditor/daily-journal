@@ -2,7 +2,9 @@
 
 const API = {
   getAPIData() {
-    return fetch("http://localhost:8088/journalEntries?_sort=id&_order=desc")
+    return fetch("http://localhost:8088/journalEntries?_sort=id&_order=desc", {
+        cache: "no-cache"
+      })
       .then(data => data.json())
   },
   saveJournalEntry(journalEntry) {
@@ -12,7 +14,8 @@ const API = {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(journalEntry)
+      body: JSON.stringify(journalEntry),
+      cache: "no-cache"
     });
   },
   filterJournalEntries(moodSearchBtn) {
@@ -45,21 +48,21 @@ const API = {
           "Content-Type": "application/json"
         },
         "body": JSON.stringify(updatedObject)
+
       })
       .then(response => response.json())
-      .then(() => {
-        const hiddenEntryId = document.querySelector("#entryId")
-        hiddenEntryId.value = ""
-      })
+    // .then(() => {
+    //   const hiddenEntryId = document.querySelector("#entryId")
+    //   hiddenEntryId.value = ""
+    // })
   },
 
   deleteJournalEntry(deleteBtnId) {
     return fetch(`http://localhost:8088/journalEntries/${deleteBtnId}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
+        method: "DELETE",
+
+      })
+      .then(response => response.json())
   }
 }
 

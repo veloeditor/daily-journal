@@ -132,13 +132,6 @@
       "entry": "I have started to implement editing capabilities to this but I'm not fully successful yet. I can retrieve the correct post to edit, but the edit does not go through.",
       "mood": "Blah",
       "id": 19
-    },
-    {
-      "date": "2019-08-11",
-      "concepts": "Webpack",
-      "entry": "We started to dabble with webpack today where we can simultaneously launch the JSON and web server at the same time. I also built the contact list exercise from that chapter.",
-      "mood": "Happy",
-      "id": 20
     }
   ]
 }
